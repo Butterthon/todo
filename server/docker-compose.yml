@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    container_name: todo_app
+    volumes:
+      - '.:/todo/'
+    ports:
+      - '8080:8080'
+    command: air
+    tty: true
